@@ -38,6 +38,7 @@ const config = {
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
     new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([{ from: './vendors', to: 'vendors' }]),
+    new CopyWebpackPlugin([{ from: 'assets/images', to: 'assets/images' }]),
   ],
 
   module: {
