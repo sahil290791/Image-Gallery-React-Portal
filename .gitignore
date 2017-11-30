@@ -31,6 +31,8 @@
 *.ipr
 *.iws
 
+dist/
+
 ## Plugin-specific files:
 
 # IntelliJ
