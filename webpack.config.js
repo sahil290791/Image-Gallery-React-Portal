@@ -33,12 +33,6 @@ const config = {
   module: {
     rules: [
       {
-        enforce: "pre",
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      },
-      {
         test: /\.js$/,
         loaders: [
           'babel-loader',
@@ -71,18 +65,10 @@ const config = {
   },
 
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      test: /\.js$/,
-      options: {
-        eslint: {
-          configFile: resolve(__dirname, '.eslintrc'),
-          cache: false,
-        }
-      },
-    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([{ from: 'vendors', to: 'vendors' }]),
+    new CopyWebpackPlugin([{ from: 'assets/images', to: 'assets/images' }]),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     new webpack.HotModuleReplacementPlugin(),
   ],
