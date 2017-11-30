@@ -2,4 +2,90 @@ $color: #262828;
 
 body {
   color: $color;
+  margin: 0;
+  font-family: monospace;
+  background: snow;
+  .hide {
+    display: none;
+  }
+  .image-preview-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    .modal {
+      height: 100%;
+      .modal-header {
+        height: 100px;
+        font-size: 20px;
+        color: #fff;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        .close {
+          cursor: pointer;
+          padding-right: 20px;
+        }
+        .title {
+          padding-left: 20px;
+        }
+      }
+      .modal-body {
+        height: 80%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 21px;
+        color: snow;
+        .image-preview {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          height: 100%;
+          width: 100%;
+        }
+        .image-title {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: snow;
+    background-color: #1EBEA5;
+    height: 100px;
+  }
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .image-container {
+    width: 400px;
+    height: 400px;
+    .image {
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 90%;
+      width: 90%;
+      max-height: 400px;
+      max-width: 400px;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .image-title {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
 }
